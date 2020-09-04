@@ -1,12 +1,15 @@
-let h1s = document.querySelectorAll("h1")
-var name = ""
-if (h1s.length > 0){
-  var name = findGetParameter("studentName");
-  h1s[0].innerHTML = name;
+let studentNameArea = document.getElementById("studentName");
+let detailsArea = document.getElementById("details");
 
-  let characterfontSize = (100 / name.length);
-  h1s[0].style.fontSize = characterfontSize + "vw";
-}
+var name = findGetParameter("studentName");
+var details = findGetParameter("details");
+
+studentNameArea.innerHTML = name;
+detailsArea.innerHTML = details
+let characterfontSize = (100 / (name.length/1.5));
+studentNameArea.style.fontSize = characterfontSize + "vw";
+
+
 
 
 function findGetParameter(parameterName) {
