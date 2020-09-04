@@ -4,7 +4,7 @@ if (h1s.length > 0){
   var name = findGetParameter("studentName");
   h1s[0].innerHTML = name;
 
-  let characterfontSize = (100 / name.length) * 2;
+  let characterfontSize = (100 / name.length);
   h1s[0].style.fontSize = characterfontSize + "vw";
 }
 
